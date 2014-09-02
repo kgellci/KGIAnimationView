@@ -16,8 +16,8 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "KGAnimationView"
-  s.version      = "0.0.2"
-  s.summary      = "A short description of KGAnimationView."
+  s.version      = "0.0.4"
+  s.summary      = "An easy way to create key frame based animations for UIView which are tied to movement based gestures."
 
   s.description  = <<-DESC
                    A longer description of KGAnimationView in Markdown format.
@@ -78,7 +78,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/kgellci/KGAnimationView.git", :tag => "0.0.3" }
+  s.source       = { :git => "https://github.com/kgellci/KGAnimationView.git", :tag => "0.0.4" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -128,7 +128,7 @@ Pod::Spec.new do |s|
   #  where they will only apply to your library. If you depend on other Podspecs
   #  you can include multiple dependencies to ensure it works.
 
-  # s.requires_arc = true
+  s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
