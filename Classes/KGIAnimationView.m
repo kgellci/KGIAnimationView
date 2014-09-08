@@ -60,6 +60,7 @@
     KGIKeyFrame currentFrame = KGIAnimationKeyFrameBetweenKeyFrames(self.prevKeyFrame, self.nextKeyFrame, percentageAdjustment);
     self.frame = currentFrame.frame;
     self.transform =CGAffineTransformMakeRotation(currentFrame.rotationRads);
+    self.alpha = currentFrame.alpha;
 }
 
 @end

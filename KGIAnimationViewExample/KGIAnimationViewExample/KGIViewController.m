@@ -39,14 +39,17 @@
     
     keyFrame = KGIKeyFrameMake(CGRectMake(0, 0, 50, 50), 0.3f);
     keyFrame.rotationRads = -0.5;
+    keyFrame.alpha = 0.5f;
     [view addAnimationFrame:keyFrame];
     
     keyFrame = KGIKeyFrameMake(CGRectMake(200, 300, 300, 300), 0.6f);
     keyFrame.rotationRads = -1;
+    keyFrame.alpha = 0.0f;
     [view addAnimationFrame:keyFrame];
     
     keyFrame = KGIKeyFrameMake(CGRectMake(100, 100, 50, 50), 1.0f);
     keyFrame.rotationRads = -2;
+    keyFrame.alpha = 1.0f;
     [view addAnimationFrame:keyFrame];
     
     self.animationView = view;

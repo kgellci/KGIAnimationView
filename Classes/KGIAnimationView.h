@@ -14,6 +14,9 @@ typedef struct {
     /*! The rotation in radians of the view at this frame */
     CGFloat rotationRads;
     
+    /*! The alpha of the view, between 0.0 - 1.0 */
+    CGFloat alpha;
+    
     /*! 
      The key frames animation if effective between the previous key frames
      maxEffectiveDelta and the current key frames maxEffectiveDelta.  
@@ -36,6 +39,7 @@ KGIKeyFrameMake(CGRect frame, CGFloat maxEffectiveDelta)
     KGIKeyFrame keyFrame;
     keyFrame.frame = frame;
     keyFrame.maxEffectiveDelta = maxEffectiveDelta;
+    keyFrame.alpha = 1.0f;
     keyFrame.rotationRads = 0;
     return keyFrame;
 }
@@ -72,6 +76,7 @@ KGIAnimationKeyFrameBetweenKeyFrames(KGIKeyFrame startKeyFrame, KGIKeyFrame endK
     KGIKeyFrame keyFrame;
     keyFrame.frame = KGIRectFrameBetweenframes(startKeyFrame.frame, endKeyFrame.frame, deltaDistance);
     keyFrame.rotationRads = KGIFloatFloatBetweenFloats(startKeyFrame.rotationRads, endKeyFrame.rotationRads, deltaDistance);
+    keyFrame.alpha = KGIFloatFloatBetweenFloats(startKeyFrame.alpha, endKeyFrame.alpha, deltaDistance);
     
     return keyFrame;
 }
