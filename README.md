@@ -5,6 +5,8 @@ Easy to use key frame based animation on UIView.
 
 The key frames are easily tied into motion based feedback such as scrolling a UIView.
 
+<a href="http://imgur.com/CaeE2Pu"><img src="http://i.imgur.com/CaeE2Pu.gif" title="source: imgur.com" /></a>
+
 ##Installation
 
 ###With CocoaPods:
